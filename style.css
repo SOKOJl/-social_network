@@ -1,0 +1,124 @@
+body {
+	background: #435a6b;
+	margin: 5px;
+}
+
+div {
+	clear: left;
+	background: #FFF;
+	width: 800px;
+	margin: 0 auto;
+	padding: 10px;
+	overflow: auto; /*Чтобы ничего не вылазило за рамки DIV'а*/
+	/*border-radius: 10px;*/
+}
+
+h1 a{
+    font-size: 28px;
+    font-family: Monaco, Courier, monospace;
+    color: #618ad2;
+	text-shadow: 2px 2px 0 #ccc;
+	margin-top: 0px;
+    transition: color .5s;
+}
+
+h1 a:hover,
+h1 a:focus {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+.main_menu {
+	/*padding: 5px;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #435a6b; /*#f1f1f1;*/
+	color: #fff;
+}
+
+img {
+    /*display: block;*/
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #666;
+}
+
+#avatarka {
+	margin: 0px;
+    width: auto; height: 100%;
+}
+
+div .avatarka {
+	text-align: center;
+	clear: none;
+	width: 300px;
+	height: 300px;
+	margin: 0;
+	overflow: hidden;
+	float:left; /* Выравнивание по левому краю */
+	/*margin: 7px 7px 7px 0;  Отступы вокруг картинки */
+}
+
+nav a {
+	position: relative;
+	display: inline-block;
+	/*margin: 5px 10px;*/
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+/* Эффект 1: Скобки */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
